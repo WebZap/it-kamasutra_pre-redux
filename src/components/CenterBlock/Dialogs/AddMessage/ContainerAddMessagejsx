@@ -1,0 +1,18 @@
+import React from "react";
+import { ActionDialogPageCreators } from "../../../../redux/redusers/dialog_page_reducer";
+
+const AddMessage = ({ NewMessageValue, dispatch }) => {
+    const changeValueArea = (event) => {
+        let text = event.target.value;
+        dispatch(ActionDialogPageCreators.updateMessageBody(text));
+    };
+    const sendMessage = () => {
+        dispatch(ActionDialogPageCreators.setUserMessage());
+    };
+
+    return <AddMessage NewMessageValue={NewMessageValue}></AddMessage>;
+};
+
+const superContainerAddMessage = conne;
+
+export default AddMessage;
